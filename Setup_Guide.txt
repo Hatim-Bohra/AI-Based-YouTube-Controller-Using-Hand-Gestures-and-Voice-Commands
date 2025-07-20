@@ -1,0 +1,55 @@
+
+AI Gesture-Based YouTube Control – Final Year Project Full Setup
+
+==========================
+🛠️ STEP 1: Install Requirements
+==========================
+Use Python 3.8 or higher.
+
+Install dependencies:
+pip install opencv-python mediapipe pyautogui pillow scikit-learn joblib speechrecognition pyaudio
+
+If you face PyAudio issues, try:
+pip install pipwin
+pipwin install pyaudio
+
+==========================
+📁 STEP 2: Folder Structure
+==========================
+- /code → Main scripts (control, training, recognition)
+- /gui → GUI app scripts
+- /gesture_data → Store your custom gesture CSV files here
+- /docs → Report documents
+- /ppt → Project presentation slides
+
+==========================
+🎯 STEP 3: Collect Gesture Data
+==========================
+Run code/collect_gesture_data.py and enter a gesture name to save landmark vectors.
+
+==========================
+🧠 STEP 4: Train ML Model
+==========================
+Run code/train_model.py
+This will load gesture CSVs and train a classifier (RandomForest), saving gesture_model.pkl
+
+==========================
+🚀 STEP 5: Run GUI + Model App
+==========================
+Run gui/gesture_gui_with_model.py
+This will use your trained model for gesture recognition and control YouTube.
+
+==========================
+🗣️ STEP 6: Add Voice + Gesture Hybrid (Optional)
+==========================
+Voice control using speechrecognition is in code/voice_gesture_hybrid.py
+You can combine voice commands and gestures.
+
+==========================
+📦 DONE! You can now build from here!
+==========================
+
+YouTube must be open and focused in Chrome or Edge while running the app.
+Press Q to exit webcam window.
+
+For full customization or help, refer to README or contact your mentor.
